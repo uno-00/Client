@@ -91,7 +91,7 @@ export function ResultsRevealScreen() {
 
   return (
     <section className="flex min-h-dvh flex-col gradient-warm">
-      <div className="relative mx-auto flex min-h-dvh w-full flex-1 flex-col px-6 py-7">
+      <div className="screen-x funnel-content relative flex min-h-dvh flex-1 flex-col py-7">
         <div className="pointer-events-none absolute inset-0 pattern-dots opacity-30" aria-hidden="true" />
         <FunnelHeader showProgress />
 

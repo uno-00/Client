@@ -68,7 +68,7 @@ export function QuizScreen() {
     <section className="relative flex min-h-dvh flex-col gradient-warm">
       <div className="pointer-events-none absolute inset-0 pattern-dots opacity-25" aria-hidden="true" />
 
-      <div className="relative mx-auto flex min-h-0 w-full flex-1 flex-col px-6 pb-6 pt-7">
+      <div className="screen-x funnel-content relative flex min-h-0 flex-1 flex-col pb-6 pt-7">
         <FunnelHeader showProgress />
 
         <AnimatePresence mode="wait">

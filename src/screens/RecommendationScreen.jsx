@@ -30,25 +30,27 @@ export function RecommendationScreen() {
   return (
     <section className="flex min-h-dvh flex-col bg-ivory">
       <motion.div
-        className="gradient-hero px-6 pt-7 pb-16"
+        className="gradient-hero screen-x pt-7 pb-16"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
-        <FunnelHeader showProgress variant="light" />
-        <EditorialLabel variant="light">Your matched plan</EditorialLabel>
-        <motion.h1
-          className="mt-3 type-display-lg text-ivory"
-          initial={{ opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1, duration: DURATION.slow, ease: EASE_OUT_EXPO }}
-        >
-          {recommendation.name}
-        </motion.h1>
-        <p className="mt-2 text-sm font-medium text-copper-light">{recommendation.generic}</p>
-        <p className="mt-3 text-[13px] leading-relaxed text-ivory/55">{recommendation.blurb}</p>
+        <div className="funnel-content">
+          <FunnelHeader showProgress variant="light" />
+          <EditorialLabel variant="light">Your matched plan</EditorialLabel>
+          <motion.h1
+            className="mt-3 type-display-lg text-ivory"
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: DURATION.slow, ease: EASE_OUT_EXPO }}
+          >
+            {recommendation.name}
+          </motion.h1>
+          <p className="mt-2 text-sm font-medium text-copper-light">{recommendation.generic}</p>
+          <p className="mt-3 text-[13px] leading-relaxed text-ivory/55">{recommendation.blurb}</p>
+        </div>
       </motion.div>
 
-      <div className="relative flex-1 px-6 pb-8">
+      <div className="screen-x funnel-content relative flex-1 pb-8">
         <motion.div
           className="-mt-12 surface-card-elevated overflow-hidden"
           initial={{ opacity: 0, y: 22 }}

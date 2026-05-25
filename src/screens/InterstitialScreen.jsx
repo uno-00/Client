@@ -27,123 +27,131 @@ export function InterstitialScreen() {
 
   return (
     <section className="min-h-dvh">
-      <div className="gradient-hero px-6 pt-7 pb-12">
-        <FunnelHeader showProgress variant="light" />
+      <div className="gradient-hero screen-x pt-7 pb-12">
+        <div className="funnel-content">
+          <FunnelHeader showProgress variant="light" />
 
-        <EditorialLabel variant="light" className="block text-center">
-          Results patients experienced
-        </EditorialLabel>
-        <motion.h2
-          className="mt-3 text-center type-display-lg text-ivory"
-          initial={{ opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.08, duration: DURATION.slow, ease: EASE_OUT_EXPO }}
-        >
-          Real outcomes. Real discretion.
-        </motion.h2>
+          <EditorialLabel variant="light" className="block text-center">
+            Results patients experienced
+          </EditorialLabel>
+          <motion.h2
+            className="mt-3 text-center type-display-lg text-ivory"
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.08, duration: DURATION.slow, ease: EASE_OUT_EXPO }}
+          >
+            Real outcomes. Real discretion.
+          </motion.h2>
 
-        <motion.div
-          className="mt-9 grid grid-cols-3 gap-2.5"
-          variants={staggerParent}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {INTERSTITIAL_STATS.map((stat) => (
-            <motion.div
-              key={stat.label}
-              variants={staggerItem}
-              className="flex flex-col items-center rounded-[var(--radius-lg)] border border-ivory/8 bg-ivory/5 px-2 py-5 text-center backdrop-blur-sm"
-            >
-              <p className="font-display text-[1.7rem] font-semibold leading-none text-copper-light">
-                <AnimatedCounter
-                  value={stat.value}
-                  suffix={stat.suffix}
-                  decimals={stat.decimals ?? 0}
-                />
-              </p>
-              <p className="mt-2.5 font-sans text-[9px] leading-snug text-ivory/48">{stat.label}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-
-      <div className="gradient-warm px-6 py-11">
-        <EditorialLabel>How treatment works</EditorialLabel>
-        <h3 className="mt-2 type-display-md">Your plan in three steps</h3>
-        <p className="mt-2 type-body-sm">Physician-guided from assessment through ongoing care.</p>
-
-        <motion.div
-          className="mt-8 space-y-3"
-          variants={staggerParent}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-24px' }}
-        >
-          {TREATMENT_STEPS.map((step, i) => (
-            <motion.div key={step.step} variants={staggerItem} className="surface-card flex gap-4 p-5">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-forest font-display text-lg font-semibold text-ivory">
-                {i + 1}
-              </div>
-              <div>
-                <h4 className="font-semibold text-forest">{step.title}</h4>
-                <p className="mt-1.5 type-body-sm">{step.description}</p>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-
-      <div className="bg-forest-deep px-6 py-11">
-        <div className="overflow-hidden rounded-[var(--radius-xl)] ring-1 ring-ivory/8">
-          <SafeImage
-            src={LOCAL_IMAGES.interstitial}
-            fallbacks={[IMAGES.interstitialPhoto]}
-            localFallback={LOCAL_FALLBACKS.interstitial}
-            alt="Licensed physician care"
-            className="aspect-[5/3] w-full object-cover object-center"
-          />
+          <motion.div
+            className="mt-9 grid grid-cols-3 gap-2.5"
+            variants={staggerParent}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {INTERSTITIAL_STATS.map((stat) => (
+              <motion.div
+                key={stat.label}
+                variants={staggerItem}
+                className="flex flex-col items-center rounded-[var(--radius-lg)] border border-ivory/8 bg-ivory/5 px-2 py-5 text-center backdrop-blur-sm"
+              >
+                <p className="font-display text-[1.7rem] font-semibold leading-none text-copper-light">
+                  <AnimatedCounter
+                    value={stat.value}
+                    suffix={stat.suffix}
+                    decimals={stat.decimals ?? 0}
+                  />
+                </p>
+                <p className="mt-2.5 font-sans text-[9px] leading-snug text-ivory/48">{stat.label}</p>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
-        <motion.div
-          className="mt-5 grid gap-3"
-          variants={staggerParent}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {BENEFIT_CARDS.map((card) => (
-            <motion.div
-              key={card.title}
-              variants={staggerItem}
-              className="flex gap-4 rounded-[var(--radius-lg)] border border-ivory/8 bg-ivory/6 p-5 backdrop-blur-sm"
-            >
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-copper/18">
-                <svg
-                  className="h-5 w-5 text-copper-light"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={ICONS[card.icon]} />
-                </svg>
-              </div>
-              <div>
-                <h4 className="font-semibold text-ivory">{card.title}</h4>
-                <p className="mt-1 type-body-sm text-ivory/52">{card.description}</p>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
 
-      <div className="gradient-warm px-6 py-9 safe-bottom">
-        <Button variant="secondary" fullWidth size="lg" onClick={resumeAfterInterstitial}>
-          Continue Assessment
-        </Button>
-        <p className="mt-3 text-center type-caption">
-          {remaining} question{remaining !== 1 ? 's' : ''} remaining
-        </p>
+      <div className="gradient-warm screen-x py-11">
+        <div className="funnel-content">
+          <EditorialLabel>How treatment works</EditorialLabel>
+          <h3 className="mt-2 type-display-md">Your plan in three steps</h3>
+          <p className="mt-2 type-body-sm">Physician-guided from assessment through ongoing care.</p>
+
+          <motion.div
+            className="mt-8 space-y-3"
+            variants={staggerParent}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-24px' }}
+          >
+            {TREATMENT_STEPS.map((step, i) => (
+              <motion.div key={step.step} variants={staggerItem} className="surface-card flex gap-4 p-5">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-forest font-display text-lg font-semibold text-ivory">
+                  {i + 1}
+                </div>
+                <div>
+                  <h4 className="font-semibold text-forest">{step.title}</h4>
+                  <p className="mt-1.5 type-body-sm">{step.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+
+      <div className="bg-forest-deep screen-x py-11">
+        <div className="funnel-content">
+          <div className="overflow-hidden rounded-[var(--radius-xl)] ring-1 ring-ivory/8">
+            <SafeImage
+              src={LOCAL_IMAGES.interstitial}
+              fallbacks={[IMAGES.interstitialPhoto]}
+              localFallback={LOCAL_FALLBACKS.interstitial}
+              alt="Licensed physician care"
+              className="aspect-[5/3] w-full object-cover object-center"
+            />
+          </div>
+          <motion.div
+            className="mt-5 grid gap-3"
+            variants={staggerParent}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {BENEFIT_CARDS.map((card) => (
+              <motion.div
+                key={card.title}
+                variants={staggerItem}
+                className="flex gap-4 rounded-[var(--radius-lg)] border border-ivory/8 bg-ivory/6 p-5 backdrop-blur-sm"
+              >
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-copper/18">
+                  <svg
+                    className="h-5 w-5 text-copper-light"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={ICONS[card.icon]} />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-ivory">{card.title}</h4>
+                  <p className="mt-1 type-body-sm text-ivory/52">{card.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+
+      <div className="gradient-warm screen-x py-9 safe-bottom">
+        <div className="funnel-content">
+          <Button variant="secondary" fullWidth size="lg" onClick={resumeAfterInterstitial}>
+            Continue Assessment
+          </Button>
+          <p className="mt-3 text-center type-caption">
+            {remaining} question{remaining !== 1 ? 's' : ''} remaining
+          </p>
+        </div>
       </div>
     </section>
   )

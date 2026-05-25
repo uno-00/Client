@@ -34,18 +34,18 @@ function FunnelRouter() {
 export default function App() {
   return (
     <FunnelProvider>
-      <main className="relative flex min-h-dvh items-stretch justify-center overflow-hidden bg-[#080f0c] lg:items-center lg:py-6">
+      <main className="relative flex min-h-dvh items-stretch justify-center overflow-hidden bg-[#080f0c] sm:items-center sm:p-4 lg:p-6">
         <div
-          className="pointer-events-none absolute inset-0 hidden lg:block"
+          className="pointer-events-none absolute inset-0 hidden sm:block"
           style={{
             background:
-              'radial-gradient(ellipse 70% 50% at 50% 50%, rgb(26 61 48 / 0.35), transparent 70%)',
+              'radial-gradient(ellipse 70% 50% at 50% 35%, rgb(26 61 48 / 0.35), transparent 70%)',
           }}
           aria-hidden="true"
         />
         <div
           data-funnel-frame
-          className="scrollbar-hide frame-glow relative h-dvh max-h-dvh w-full max-w-[390px] overflow-x-hidden overflow-y-auto overscroll-contain bg-ivory lg:h-[min(844px,92dvh)] lg:max-h-[min(844px,92dvh)] lg:rounded-[2rem] lg:ring-1 lg:ring-white/10"
+          className="scrollbar-hide frame-glow relative h-dvh max-h-dvh w-full overflow-x-hidden overflow-y-auto overscroll-contain bg-ivory sm:h-[min(900px,94dvh)] sm:max-h-[min(900px,94dvh)] sm:max-w-[430px] sm:rounded-[2rem] sm:ring-1 sm:ring-white/10"
         >
           <FunnelRouter />
         </div>

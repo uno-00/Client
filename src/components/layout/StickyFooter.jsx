@@ -12,7 +12,7 @@ export function StickyFooter({ children, className = '' }) {
   return (
     <motion.div
       className={[
-        'sticky bottom-0 z-30 mt-auto w-full shrink-0 border-t border-sage/10 bg-ivory/98 px-6 py-5 backdrop-blur-2xl safe-bottom',
+        'sticky bottom-0 z-30 mt-auto w-full shrink-0 border-t border-sage/10 bg-ivory/98 screen-x py-5 backdrop-blur-2xl safe-bottom',
         'shadow-[0_-16px_48px_-12px_rgba(12,31,23,0.1)]',
         className,
       ].join(' ')}
@@ -20,7 +20,7 @@ export function StickyFooter({ children, className = '' }) {
       initial={reducedMotion ? false : 'hidden'}
       animate="visible"
     >
-      <div className="mx-auto w-full max-w-full">{children}</div>
+      <div className="funnel-content">{children}</div>
     </motion.div>
   )
 }

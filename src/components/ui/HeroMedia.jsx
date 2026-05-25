@@ -9,7 +9,7 @@ export function HeroMedia() {
   const reducedMotion = useReducedMotion()
 
   return (
-    <div className="absolute inset-0 overflow-hidden">
+    <div className="hero-media absolute inset-0 overflow-hidden">
       <motion.div
         className="h-full w-full"
         initial={reducedMotion ? false : { scale: 1.06 }}
@@ -25,7 +25,7 @@ export function HeroMedia() {
           fallbacks={[IMAGES.heroPhoto]}
           localFallback={LOCAL_FALLBACKS.hero}
           alt=""
-          className="h-full w-full object-cover object-[center_20%]"
+          className="h-full w-full object-cover object-[center_18%]"
           loading="eager"
           fetchPriority="high"
         />

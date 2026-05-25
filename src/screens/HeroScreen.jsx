@@ -24,10 +24,10 @@ export function HeroScreen() {
   const { startAssessment } = useFunnel()
 
   return (
-    <section className="relative min-h-dvh overflow-hidden">
+    <section className="hero-screen relative overflow-x-hidden">
       <HeroMedia />
 
-      <div className="relative z-10 flex min-h-dvh flex-col px-6 pb-10 pt-7 safe-bottom">
+      <div className="hero-shell screen-x funnel-content-wide relative z-10 flex flex-col safe-bottom">
         <motion.header
           className="flex items-center"
           initial={{ opacity: 0, y: -12 }}
@@ -37,10 +37,15 @@ export function HeroScreen() {
           <Logo variant="light" />
         </motion.header>
 
-        <div className="flex flex-1 flex-col justify-end pb-4 pt-12">
-          <motion.div initial="hidden" animate="visible" variants={staggerParent}>
+        <div className="hero-main flex flex-1 flex-col justify-end">
+          <motion.div
+            className="w-full lg:max-w-[32rem]"
+            initial="hidden"
+            animate="visible"
+            variants={staggerParent}
+          >
             <motion.div variants={staggerItem}>
-              <EditorialLabel variant="light" className="mb-4 block">
+              <EditorialLabel variant="light" className="hero-eyebrow block">
                 Private · Physician-guided
               </EditorialLabel>
             </motion.div>
@@ -49,7 +54,7 @@ export function HeroScreen() {
               Modern care for a more confident you
             </motion.h1>
 
-            <motion.p variants={staggerItem} className="mt-5 max-w-[20rem] type-body text-ivory/70">
+            <motion.p variants={staggerItem} className="hero-lede max-w-[20rem] type-body text-ivory/70">
               <span className="font-medium text-ivory/92">{BRAND.tagline}</span>
               <span className="mt-2 block text-[14px] text-ivory/48">
                 A discreet assessment reviewed by licensed physicians.
@@ -58,15 +63,15 @@ export function HeroScreen() {
 
             <motion.div
               variants={staggerItem}
-              className="mt-8 overflow-hidden rounded-[var(--radius-xl)] border border-ivory/10 bg-ivory/5 backdrop-blur-md"
+              className="hero-stats-card overflow-hidden rounded-[var(--radius-xl)] border border-ivory/10 bg-ivory/5 backdrop-blur-md"
             >
               <div className="grid grid-cols-3 divide-x divide-ivory/8">
                 {stats.map((s) => (
-                  <div key={s.l} className="px-2 py-4 text-center">
-                    <p className="font-display text-[1.6rem] font-semibold leading-none text-copper-light">
+                  <div key={s.l} className="hero-stat-item px-2 text-center">
+                    <p className="hero-stat-value font-display font-semibold leading-none text-copper-light">
                       {s.v}
                     </p>
-                    <p className="mt-1.5 font-sans text-[9px] font-medium tracking-[0.1em] text-ivory/42 uppercase">
+                    <p className="hero-stat-label mt-1.5 font-sans font-medium tracking-[0.1em] text-ivory/42 uppercase">
                       {s.l}
                     </p>
                   </div>
@@ -76,7 +81,7 @@ export function HeroScreen() {
 
             <motion.div
               variants={staggerItem}
-              className="glass-dark mt-8 p-5"
+              className="hero-cta glass-dark"
             >
               <Button variant="primary" size="lg" fullWidth onClick={startAssessment}>
                 Start Assessment
