@@ -38,15 +38,15 @@ export function RecommendationScreen() {
           <FunnelHeader showProgress variant="light" />
           <EditorialLabel variant="light">Your matched plan</EditorialLabel>
           <motion.h1
-            className="mt-3 type-display-lg text-ivory"
+            className="mt-3 font-display text-[2rem] font-semibold leading-[1.05] tracking-[-0.03em] text-ivory drop-shadow-[0_2px_16px_rgba(0,0,0,0.45)]"
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: DURATION.slow, ease: EASE_OUT_EXPO }}
           >
             {recommendation.name}
           </motion.h1>
-          <p className="mt-2 text-sm font-medium text-copper-light">{recommendation.generic}</p>
-          <p className="mt-3 text-[13px] leading-relaxed text-ivory/55">{recommendation.blurb}</p>
+          <p className="mt-2 text-sm font-semibold text-copper-light">{recommendation.generic}</p>
+          <p className="mt-3 text-[13px] leading-relaxed text-ivory/72">{recommendation.blurb}</p>
         </div>
       </motion.div>
 

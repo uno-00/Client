@@ -39,7 +39,7 @@ export function HeroScreen() {
 
         <div className="hero-main flex flex-1 flex-col justify-end">
           <motion.div
-            className="w-full lg:max-w-[32rem]"
+            className="hero-copy-stack w-full lg:max-w-[32rem]"
             initial="hidden"
             animate="visible"
             variants={staggerParent}
@@ -56,9 +56,6 @@ export function HeroScreen() {
 
             <motion.p variants={staggerItem} className="hero-lede max-w-[20rem] type-body text-ivory/70">
               <span className="font-medium text-ivory/92">{BRAND.tagline}</span>
-              <span className="mt-2 block text-[14px] text-ivory/48">
-                A discreet assessment reviewed by licensed physicians.
-              </span>
             </motion.p>
 
             <motion.div

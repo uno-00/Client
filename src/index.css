@@ -143,12 +143,17 @@
     padding-bottom: clamp(0.25rem, 1.2dvh, 1rem);
   }
 
+  .hero-copy-stack {
+    max-width: 25.5rem;
+  }
+
   .hero-eyebrow {
     margin-bottom: clamp(0.55rem, 1.5dvh, 1rem);
   }
 
   .hero-lede {
     margin-top: clamp(0.75rem, 1.8dvh, 1.25rem);
+    line-height: 1.45;
   }
 
   .hero-stats-card {
@@ -192,10 +197,6 @@
       margin-top: 0.65rem;
       font-size: 0.86rem;
       line-height: 1.45;
-    }
-
-    .hero-lede span:last-child {
-      display: none;
     }
 
     .hero-stats-card {
