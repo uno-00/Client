@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { PRODUCT } from '../data/quiz'
-import { IMAGES, LOCAL_IMAGES, LOCAL_FALLBACKS } from '../brand/tokens'
+import { LOCAL_IMAGES, LOCAL_FALLBACKS, REMOTE_IMAGES } from '../brand/tokens'
 import { fadeUp, staggerItem, staggerParent, DURATION, EASE_OUT_EXPO } from '../brand/motion'
 import { SafeImage } from '../components/ui/SafeImage'
 import { useFunnel } from '../context/FunnelContext'
@@ -60,7 +60,7 @@ export function RecommendationScreen() {
           <div className="relative bg-ivory-dark">
             <SafeImage
               src={LOCAL_IMAGES.product}
-              fallbacks={[IMAGES.productPhoto]}
+              fallbacks={[REMOTE_IMAGES.productPhoto]}
               localFallback={LOCAL_FALLBACKS.product}
               alt="Verdan care kit"
               className="aspect-[16/10] w-full object-cover object-center"

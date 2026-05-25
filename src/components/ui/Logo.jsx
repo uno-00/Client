@@ -4,13 +4,11 @@ export function Logo({ variant = 'light', size = 'md', className = '' }) {
   const textColors = {
     light: 'text-ivory',
     dark: 'text-forest',
-    copper: 'text-copper',
   }
 
   const sizes = {
     sm: 'text-[17px]',
     md: 'text-xl',
-    lg: 'text-[1.65rem]',
   }
 
   const markFill = variant === 'light' ? '#b8cdc3' : '#8da698'

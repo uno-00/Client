@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { IMAGES, LOCAL_IMAGES, LOCAL_FALLBACKS, VIDEO } from '../../brand/tokens'
+import { LOCAL_IMAGES, LOCAL_FALLBACKS, REMOTE_IMAGES, VIDEO } from '../../brand/tokens'
 import { useReducedMotion } from '../../hooks/useReducedMotion'
 import { SafeImage } from './SafeImage'
 
@@ -22,7 +22,7 @@ export function HeroMedia() {
       >
         <SafeImage
           src={LOCAL_IMAGES.hero}
-          fallbacks={[IMAGES.heroPhoto]}
+          fallbacks={[REMOTE_IMAGES.heroPhoto]}
           localFallback={LOCAL_FALLBACKS.hero}
           alt=""
           className="h-full w-full object-cover object-[center_18%]"

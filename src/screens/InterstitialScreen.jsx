@@ -5,7 +5,7 @@ import {
   BENEFIT_CARDS,
   QUESTIONS_AFTER_INTERSTITIAL,
 } from '../data/quiz'
-import { IMAGES, LOCAL_IMAGES, LOCAL_FALLBACKS } from '../brand/tokens'
+import { LOCAL_IMAGES, LOCAL_FALLBACKS, REMOTE_IMAGES } from '../brand/tokens'
 import { staggerItem, staggerParent, DURATION, EASE_OUT_EXPO } from '../brand/motion'
 import { SafeImage } from '../components/ui/SafeImage'
 import { useFunnel } from '../context/FunnelContext'
@@ -103,7 +103,7 @@ export function InterstitialScreen() {
           <div className="overflow-hidden rounded-[var(--radius-xl)] ring-1 ring-ivory/8">
             <SafeImage
               src={LOCAL_IMAGES.interstitial}
-              fallbacks={[IMAGES.interstitialPhoto]}
+              fallbacks={[REMOTE_IMAGES.interstitialPhoto]}
               localFallback={LOCAL_FALLBACKS.interstitial}
               alt="Licensed physician care"
               className="aspect-[5/3] w-full object-cover object-center"

@@ -3,10 +3,6 @@
 export const BRAND = {
   name: 'Verdan',
   tagline: 'Confidence backed by modern care.',
-  positioning:
-    'Discreet, physician-guided ED treatment — designed around your life, not your label.',
-  paletteReasoning:
-    'Forest green and warm ivory signal calm, premium lifestyle-health (not Keeps navy/yellow or MEDVi bright blue). Soft copper adds confident warmth at conversion moments.',
 }
 
 /** Bundled photos (client-safe, work offline) */
@@ -24,14 +20,11 @@ export const LOCAL_FALLBACKS = {
 }
 
 /** Remote fallbacks when bundled assets are missing */
-export const IMAGES = {
-  hero: LOCAL_IMAGES.hero,
+export const REMOTE_IMAGES = {
   heroPhoto:
     'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=1200&q=85&auto=format&fit=crop&crop=faces',
-  interstitial: LOCAL_IMAGES.interstitial,
   interstitialPhoto:
     'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&q=85&auto=format&fit=crop',
-  product: LOCAL_IMAGES.product,
   productPhoto:
     'https://images.pexels.com/photos/3786154/pexels-photo-3786154.jpeg?auto=compress&cs=tinysrgb&w=1200',
 }

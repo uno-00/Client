@@ -5,9 +5,6 @@ const variants = {
   primary: 'btn-primary-gradient btn-primary-shine text-ivory',
   secondary:
     'bg-forest text-ivory shadow-soft hover:bg-forest-muted active:bg-forest-deep',
-  ghost:
-    'bg-white/90 text-forest border border-sage/20 shadow-soft hover:bg-white hover:border-sage/35',
-  outline: 'bg-transparent text-ivory border border-ivory/30 hover:bg-ivory/10',
 }
 
 export function Button({
@@ -22,7 +19,6 @@ export function Button({
   ...props
 }) {
   const sizes = {
-    sm: 'min-h-[44px] px-5 text-sm',
     md: 'min-h-[52px] px-7 text-[15px]',
     lg: 'min-h-[56px] px-8 text-base',
   }

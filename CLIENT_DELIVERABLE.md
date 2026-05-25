@@ -42,7 +42,7 @@ Insights + plan use **all five** answers (`src/utils/answers.js` → `insights.j
 | **4. Results reveal** | `ResultsRevealScreen.jsx` | Loading → progress → staggered insights → plan reveal |
 | **5. Recommendation** | `RecommendationScreen.jsx` | Product card, plans, testimonial, sticky CTA |
 
-**Imagery:** Bundled SVGs in `/public/images/` (always load). Optional Unsplash overlays when online.
+**Imagery:** Bundled photos in `/public/images/` with local SVG fallbacks. Optional remote fallbacks load only if bundled assets fail.
 
 ---
 

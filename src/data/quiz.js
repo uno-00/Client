@@ -137,7 +137,6 @@ export const BENEFIT_CARDS = [
 ]
 
 export const PRODUCT = {
-  name: 'Verdan Performance Plan',
   generic: 'Sildenafil 50mg · As-needed',
   description:
     'Physician-prescribed, pharmacy-grade treatment with ongoing care team access.',
