@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" fill="none" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e4536"/>
+      <stop offset="45%" stop-color="#0c1f17"/>
+      <stop offset="100%" stop-color="#080f0c"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="65%" cy="25%" r="55%">
+      <stop offset="0%" stop-color="#c07855" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#c07855" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="20%" cy="70%" r="45%">
+      <stop offset="0%" stop-color="#8da698" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#8da698" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1200" fill="url(#sky)"/>
+  <rect width="800" height="1200" fill="url(#glow)"/>
+  <rect width="800" height="1200" fill="url(#glow2)"/>
+  <ellipse cx="400" cy="900" rx="320" ry="120" fill="#0c1f17" opacity="0.5"/>
+  <path d="M520 280c80 0 145 65 145 145s-65 145-145 145-145-65-145-145 65-145 145-145z" fill="#264a3a" opacity="0.4"/>
+  <path d="M400 750c-60 80-180 120-180 120s200-40 280-160c-40 60-100 40-100 40z" fill="#1a3d30" opacity="0.6"/>
+</svg>

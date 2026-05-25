@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ece7dd"/>
+      <stop offset="100%" stop-color="#d4cec4"/>
+    </linearGradient>
+    <linearGradient id="box" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8f5ef"/>
+    </linearGradient>
+    <filter id="sh" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#0c1f17" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg)"/>
+  <circle cx="650" cy="80" r="120" fill="#c07855" opacity="0.08"/>
+  <circle cx="120" cy="400" r="90" fill="#1a3d30" opacity="0.06"/>
+  <g filter="url(#sh)" transform="translate(220 70)">
+    <rect width="360" height="280" rx="20" fill="url(#box)" stroke="#8da698" stroke-width="1.5"/>
+    <text x="32" y="52" font-family="Georgia, serif" font-size="22" font-weight="600" fill="#1a3d30">Verdan</text>
+    <text x="32" y="78" font-family="system-ui,sans-serif" font-size="11" fill="#5f7a6e" letter-spacing="0.12em">PERFORMANCE PLAN</text>
+    <rect x="32" y="100" width="296" height="1" fill="#8da698" opacity="0.25"/>
+    <rect x="32" y="130" width="200" height="10" rx="5" fill="#1a3d30" opacity="0.12"/>
+    <rect x="32" y="152" width="160" height="10" rx="5" fill="#1a3d30" opacity="0.08"/>
+    <rect x="32" y="174" width="120" height="10" rx="5" fill="#1a3d30" opacity="0.06"/>
+    <circle cx="300" cy="200" r="36" fill="#c07855" opacity="0.15"/>
+    <circle cx="300" cy="200" r="20" fill="#c07855"/>
+    <path d="M292 200l6 6 14-14" stroke="#f8f5ef" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="32" y="230" width="120" height="36" rx="18" fill="#1a3d30"/>
+    <text x="58" y="253" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#f8f5ef">As-needed</text>
+  </g>
+  <text x="400" y="420" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#5f7a6e" letter-spacing="0.08em">PHYSICIAN-PRESCRIBED · DISCREET DELIVERY</text>
+</svg>
