@@ -123,13 +123,11 @@
   }
 
   .hero-screen {
-    min-height: 100svh;
-    min-height: 100dvh;
+    min-height: 100%;
   }
 
   .hero-shell {
-    min-height: 100svh;
-    min-height: 100dvh;
+    min-height: 100%;
     padding-top: clamp(1rem, 3dvh, 1.75rem);
     padding-bottom: max(clamp(0.85rem, 2.4dvh, 2.5rem), env(safe-area-inset-bottom));
   }

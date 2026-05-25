@@ -20,7 +20,7 @@ export function ScreenWrapper({ children, className = '', direction = 1 }) {
       animate="center"
       exit="exit"
       transition={pageTransition(direction, reducedMotion)}
-      className={`min-h-dvh w-full ${className}`}
+      className={`min-h-full w-full ${className}`}
     >
       {children}
     </motion.div>

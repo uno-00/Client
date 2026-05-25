@@ -26,7 +26,7 @@ export function InterstitialScreen() {
   const remaining = QUESTIONS_AFTER_INTERSTITIAL
 
   return (
-    <section className="min-h-dvh">
+    <section className="min-h-full">
       <div className="gradient-hero screen-x pt-7 pb-12">
         <div className="funnel-content">
           <FunnelHeader showProgress variant="light" />

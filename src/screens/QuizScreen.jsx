@@ -65,7 +65,7 @@ export function QuizScreen() {
     : questionVariants
 
   return (
-    <section className="relative flex min-h-dvh flex-col gradient-warm">
+    <section className="relative flex min-h-full flex-col gradient-warm">
       <div className="pointer-events-none absolute inset-0 pattern-dots opacity-25" aria-hidden="true" />
 
       <div className="screen-x funnel-content relative flex min-h-0 flex-1 flex-col pb-6 pt-7">

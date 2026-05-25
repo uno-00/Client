@@ -90,8 +90,8 @@ export function ResultsRevealScreen() {
   }, [phase, insights, reducedMotion])
 
   return (
-    <section className="flex min-h-dvh flex-col gradient-warm">
-      <div className="screen-x funnel-content relative flex min-h-dvh flex-1 flex-col py-7">
+    <section className="flex min-h-full flex-col gradient-warm">
+      <div className="screen-x funnel-content relative flex min-h-full flex-1 flex-col py-7">
         <div className="pointer-events-none absolute inset-0 pattern-dots opacity-30" aria-hidden="true" />
         <FunnelHeader showProgress />
 

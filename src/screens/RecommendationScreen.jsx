@@ -28,7 +28,7 @@ export function RecommendationScreen() {
   const activePlan = PLANS.find((p) => p.id === selectedPlan)
 
   return (
-    <section className="flex min-h-dvh flex-col bg-ivory">
+    <section className="flex min-h-full flex-col bg-ivory">
       <motion.div
         className="gradient-hero screen-x pt-7 pb-16"
         initial={{ opacity: 0 }}
