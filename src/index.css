@@ -123,16 +123,20 @@
   }
 
   .hero-screen {
+    height: 100%;
     min-height: 100%;
+    background: var(--color-forest-deep);
   }
 
   .hero-shell {
+    height: 100%;
     min-height: 100%;
     padding-top: clamp(1rem, 3dvh, 1.75rem);
     padding-bottom: max(clamp(0.85rem, 2.4dvh, 2.5rem), env(safe-area-inset-bottom));
   }
 
   .hero-media {
+    height: 100%;
     min-height: 100%;
   }
 
